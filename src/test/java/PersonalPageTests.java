@@ -17,7 +17,6 @@ public class PersonalPageTests extends Driver {
     RegistrationPage registrationPage;
     User user;
     PersonalAccountPage personalAccountPage;
-    UserAPI userAPI;
     String name;
     String email;
     String password;
@@ -34,7 +33,7 @@ public class PersonalPageTests extends Driver {
         email = "nikatulka@mail.ru";
         password = "884696156";
         user = new User(email, password, name);
-        userAPI.createUser(user);
+        UserAPI.createUser(user);
         mainPage.clickLoginButton();
         loginPage.waitForLoad();
         loginPage.fillLoginForm(email, password);

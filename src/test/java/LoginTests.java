@@ -12,12 +12,11 @@ import models.User;
 
 public class LoginTests extends Driver {
 
-     MainPage mainPage;
-     LoginPage loginPage;
-     RegistrationPage registrationPage;
-     User user;
-     PasswordRecoveryPage passwordRecoveryPage;
-     UserAPI userAPI;
+    MainPage mainPage;
+    LoginPage loginPage;
+    RegistrationPage registrationPage;
+    User user;
+    PasswordRecoveryPage passwordRecoveryPage;
     String name;
     String email;
     String password;
@@ -34,7 +33,7 @@ public class LoginTests extends Driver {
         email = "nikatulka@mail.ru";
         password = "884696156";
         user = new User(email, password, name);
-        userAPI.createUser(user);
+        UserAPI.createUser(user);
     }
     @Test
     @DisplayName("Вход по кнопке «Войти в аккаунт» на главной странице")
